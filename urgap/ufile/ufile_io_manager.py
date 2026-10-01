@@ -1,7 +1,7 @@
 """UFileIOManager module of urgap."""
 
-from urgap.ufile.io._base import UIOBase
 from urgap.ubackend_manager import UBackendManager
+from urgap.ufile.io._base import UIOBase
 
 
 class UFileIOManager(UBackendManager[UIOBase]):
