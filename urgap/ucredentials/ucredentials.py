@@ -12,7 +12,7 @@ from jsonschema import validate
 import urgap.ucredentials.io
 
 from urgap.ucredentials.io._base import IOBaseCreds
-from urgap.umanager import UManager
+from urgap.ubackend_manager import UBackendManager
 
 P = ParamSpec("P")
 
@@ -44,7 +44,7 @@ DEFAULT_CREDENTIALS_SCHEME = {
 }
 
 
-class UCredentialManager(UManager[IOBaseCreds]):
+class UCredentialManager(UBackendManager[IOBaseCreds]):
     """Extracts secrets from the secret store defined per credentials_lookup.json entry."""
 
     NAMESPACE_PACKAGE = "urgap.ucredentials.io"
